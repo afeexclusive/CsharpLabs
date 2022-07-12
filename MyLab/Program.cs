@@ -16,286 +16,22 @@ namespace MyLab
 
         static void Main(string[] args)
         {
-
-            //Console.WriteLine(Interview(new int[] { 5, 5, 10, 10, 25, 15, 20, 20 }, 120));
-            //==============================================================================
-            //Console.WriteLine(MonthName(0));
-            //=======================================================================
-            //var a = MultiplyByLength(new int[] { 1, 3, 5, 6 });
-            //foreach (var item in a)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //================================================================================
-
-            //Console.WriteLine(
-            //    DiagonalDifference( new List<List<int>>()
-            //    { 
-            //        new List<int>(){ 11, 2, 4 }, 
-            //        new List<int>() { 4, 5, 6 }, 
-            //        new List<int>() { 10, 8, -12} 
-            //    }));
-            //==================================================================================
-
-            //PlusMinus(new List<int> { -4, 3, -9, 0, 4, 1 });
-            //====================================================================
-
-            //Staircase(9);
-            //========================================================================
-
-            //MiniMaxSum(new List<int> { 1, 3, 5, 7, 9 });
-            //MiniMaxSum(new List<int> { 256741038, 623958417, 467905213, 714532089, 938071625 });
-            //===================================================================================
-
-            //Console.WriteLine(ReverseWord("afe"));
-            //=======================================================================================
-
-            //Console.WriteLine(TimeConversion("07:05:45PM"));
-            //========================================================================================
-            //Console.WriteLine(MinimumDistances(new List<int> { 1, 2, 3, 4, 3, 6, 7, 2, 9 }));
-
-            //=========================================================================================
-            //var tt = PrintDateTimeFormats();
-            //for (int i = 0; i < tt.Length; i++)
-            //{
-
-            //    Console.WriteLine($"{tt[i]} --- {i}");
-            //}
-            //===============================================================================================
-
-            //Console.WriteLine(HowManyGames(20, 3, 6, 80));
-            //=========================================================================================
-
-            //Console.WriteLine(Factorial(5));
-            //======================================================================================
-
-            //Console.WriteLine(RandomNum());
-            //====================================================================================
-
-            //for (int i = 0; i < 5000; i++)
-            //{
-            //    Console.WriteLine(ExtractNumberFromString(Guid.NewGuid().ToString()));
-            //}
-            //========================================================================================
-
-            //Console.WriteLine(FirstDayOfYear(DateTime.Now));
-            //================================================================================
-
-            //var people = GenerateSn();
-            //foreach (var item in people)
-            //{
-            //    Console.WriteLine($"No: {item.Sn} Name: {item.Name}");
-
-            //}
-
-            //===================================================================================================
-            //var dics = ConvertJsonToDic("{\"CcyCode\":\"GMD\",\"CountryCode\":\"GMB\",\"EncryptLogin\":false,\"EnforcePwdDays\":4,\"MaxiPasswordLength\":10}");
-            //foreach (var item in dics)
-            //{
-            //    Console.WriteLine($"key: {item.Key} || value: {item.Value}");
-            //}
-            //====================================================================================================
-            //int[] data = new int[] {3,6,2,8,1,5,4,10,9,7 };
-
-            //==========================================================================================================
-            //string[] lines = System.IO.File.ReadAllLines(@"C:\Users\AdMiN\OneDrive\Desktop\algorithm\1000line.txt");
-            //List<int> numbers = new List<int>();
-            //// Display the file contents by using a foreach loop.
-            //foreach (string line in lines)
-            //{
-            //    //Console.WriteLine(line);
-            //    numbers.Add(int.Parse(line));
-            //}
-
-            //int[] data = numbers.ToArray();
-            ////ArraySort(data);
-
-            //data.MySort();
-
-            //foreach (var item in data)
-            //{
-            //    Console.WriteLine(item);
-            //}
-
-            //==========================================================================================================
-
-            //var bbody = new RequstDetails();
-
-            //Console.WriteLine("enter prn then tin");
-            //bbody.prn =  Console.ReadLine();
-            //bbody.tin = Console.ReadLine();
-            //string[] st = new string[] {"afe","ayokunle", "bole" };
-
-            //var res = st.OrderByDescending(x=>x);
-
-
-            //CallNRA(bbody);
-
-            //==============================================================================
-
-            //Console.WriteLine(ValidateNullableDate("2001-12-29"));
-
-            //string strg = null;
-
-            //Console.WriteLine(strg ?? string.Join("", strg.Take(10)));
-
-            //int value = 8;
-            //string binary = Convert.ToString(value, 2);
-
-            //Console.WriteLine(RepeatingChar("bookkeepping"));
-
-            //===========================================================================
-
-            //DateTime dt = DateTime.FromOADate(39938);
-            //Console.WriteLine(dt);
-            //===========================================================================
-
-            //Console.WriteLine(NameDescription("Ayokunle").Name);
-            //Console.WriteLine(NameDescription("Ayokunle").isValid);
-            //Console.WriteLine(NameDescription("Ayokunle").Lenth);
-            //===========================================================================
-
-            //Console.WriteLine(Regex.Replace("My name IS Afe", @"s", ""));
-            //Console.WriteLine("My name IS Afe".Replace(@" ", ""));
-            //==========================================================================
-
-            //var result = DynamicResult(1);
-
-            //string resultStr = JsonConvert.SerializeObject(result.ReturnObj);
-
-            //var sst = result.ReturnObj.ToString();
-
-            //PersonInfo personInfoo = JsonConvert.DeserializeObject<PersonInfo>(resultStr);
-            //=========================================================================================================
-
-            //StructureOrClass();
-            //========================================================================================
-
-            //var student = new { Id = 1, FirstName = "James", LastName = "Bond" };
-            //Console.WriteLine(student.GetType().Name);
-            //=========================================================================================
-
-            // Culture culture = new Culture();
-
-            // culture = MyLibrary.GetCultureInfo();
-
-            //foreach (var item in Fibofibo(16))
-            //{
-            //    Console.Write(item + " ");
-            //}
-
-            //Console.WriteLine("-------");
-            //Console.WriteLine("-------");
-
-            //for (int i = 0; i < 16; i++)
-            //{
-            //    Console.Write(Fibonacci(i) + " ");
-            //}
-            //=============================================================================================
-
-            //int n, r, sum = 0, temp;
-            //Console.Write("Enter the Number: ");
-            //n = int.Parse(Console.ReadLine());
-            //temp = n;
-            //while (n > 0)
-            //{
-            //    r = n % 10;
-            //    sum = (sum * 10) + r;
-            //    n = n / 10;
-            //}
-            //if (temp == sum)
-            //    Console.Write("Number is Palindrome.");
-            //else
-            //    Console.Write("Number is not Palindrome");
-            //======================================================
-
-            //ReadDigits(4535);
-            //=========================================================
-
-            //string str = "One two     three\n four\tfive ";
-            //int i = 0;
-            //int wc = 0;
-            //bool toCount = false;fibo
-            //while (i < str.Length)
-            //{
-
-            //    if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-            //    {
-            //        toCount = false;
-            //    }
-            //    else if (!toCount)
-            //    {
-            //        toCount = true;
-            //        wc++;
-            //    }
-            //    i++;
-            //}
-
-
-            //Console.WriteLine(wc);
-            //=======================================================================================
-
-            //search("Amen hallelujah amen amen amen", "Amen");
-
-            //==========================================================================================
-
-            //RemoveDup("BookKEepping");
-
-            //==================================================================================
-
-            //string mystr = "jdghd6dndfdn,dfd7nfdksdn8dlccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccsdfkjdlkflidudnvioyiodnvldjf9dsdfmdbkdmndkjdfhdkflndfndmn";
-            //char[] s = mystr.ToCharArray();
-            //Array.Sort(s);
-
-            //var ans = s.GroupBy(x => x.ToString());
-            //var jj = ans.OrderByDescending(y => y.Count()).First().Key;
-            //Console.WriteLine();
-            //Console.WriteLine(string.Join("",s));
-
-            //=================================================================================
-
-            string mystr = "jdghd6dndfdn,dfd7nfdksdn8dlccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccsdfkjdlkflidudnvioyiodnvldjf9dsdfmdbkdmndkjdfhdkflndfndmn"; 
-           
-            int[] count = new int[256];
-            int max = int.MinValue;
-            var result = ' ';
-            for (int i = 0; i < mystr.Length; i++)
-            {
-                count[mystr[i]]++;
-                if (max < count[mystr[i]])
-                {
-                    max = count[mystr[i]];
-                    result = mystr[i];
-                }
-            }
-
-            int[] myaa = new int[256];
-
-            Console.WriteLine("{0}{1}", "charValue:", myaa['d']);
-
-            foreach (var item in myaa)
-            {
-                Console.Write(item + " ");
-            }
-
-
-            //var ans = s.GroupBy(x => x.ToString());
-            //var jj = ans.OrderByDescending(y => y.Count()).First().Key;
-            //foreach (var item in count)
-            //{
-            //    Console.Write(item + " ");
-            //}
-            Console.WriteLine("----------");
-            Console.WriteLine("----------");
-            Console.WriteLine(mystr);
-            Console.WriteLine(result);
-
-            //=========================================================================================
-            var kk = Fibonacci(8);
-
-            Console.WriteLine(Fibonacci(5));
-
-            Console.ReadLine();
+            LinkedList list = new LinkedList();
+            list.AddNode(new LinkedList.Node(85));
+            list.AddNode(new LinkedList.Node(15));
+            list.AddNode(new LinkedList.Node(4));
+            list.AddNode(new LinkedList.Node(20));
+
+            // List before reversal
+            Console.WriteLine("Given linked list:");
+            list.PrintList();
+
+            // Reverse the list
+            list.ReverseList();
+
+            // List after reversal
+            Console.WriteLine("Reversed linked list:");
+            list.PrintList();
         }
 
         static char[] removeDuplicateBST(char[] str, int n)
@@ -306,15 +42,15 @@ namespace MyLab
             HashSet<char> s = new HashSet<char>(n - 1);
             foreach (char x in str)
                 s.Add(x);
+            return s.ToArray();
+            //char[] st = new char[s.Count];
 
-            char[] st = new char[s.Count];
+            //// Print content of the set
+            //int i = 0;
+            //foreach (char x in s)
+            //    st[i++] = x;
 
-            // Print content of the set
-            int i = 0;
-            foreach (char x in s)
-                st[i++] = x;
-
-            return st;
+            //return st;
         }
 
         static string RemoveDup(string str)
@@ -974,10 +710,296 @@ namespace MyLab
             }
         }
 
-        
+    }
+
+
+
+    public class LinkedList
+    {
+        Node head;
+
+        public class Node
+        {
+            public int data;
+            public Node next;
+
+            public Node(int d)
+            {
+                data = d;
+                next = null;
+            }
+        }
+
+        public void AddNode(Node node)
+        {
+            if (head == null)
+                head = node;
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+        }
+
+        // function to reverse the list
+        public void ReverseList()
+        {
+            Node prev = null, current = head, next = null;
+            while (current != null)
+            {
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+            head = prev;
+        }
+
+        // function to print the list data
+        public void PrintList()
+        {
+            Node current = head;
+            while (current != null)
+            {
+                Console.Write(current.data + " ");
+                current = current.next;
+            }
+            Console.WriteLine();
+        }
+
+    }
+    public class SpecialStack
+    {
+
+        int min = -1; // sentinel value for min
+        static int demoVal = 9999; // DEMO_VALUE
+        Stack<int> st = new Stack<int>();
+
+        public void getMin() { Console.WriteLine("min is: " + min); }
+
+        public void push(int val)
+        {
+            // if stack is empty OR current element is less than
+            // min, update min..
+            if (st.Count == 0 || val < min)
+            {
+                min = val;
+            }
+
+            st.Push(val * demoVal
+                    + min); // encode the current value with
+                            // demoVal, combine with min and
+                            // insert into stack
+            Console.WriteLine("pushed: " + val);
+        }
+
+        public int pop()
+        {
+            // if stack is empty return -1;
+            if (st.Count == 0)
+            {
+                Console.WriteLine("stack underflow");
+                return -1;
+            }
+
+            int val = st.Pop();
+
+            if (st.Count != 0) // if stack is empty, there would
+                               // be no min value present, so
+                               // make min as -1
+                min = st.Peek() % demoVal;
+            else
+                min = -1;
+            Console.WriteLine("popped: " + val / demoVal);
+            return val / demoVal; // decode actual value from
+                                  // encoded value
+        }
+
+        public int peek()
+        {
+            Console.WriteLine("Peek:" + st.Peek() / demoVal);
+            return st.Peek() / demoVal; // decode actual value
+                                        // from encoded value
+        }
 
 
     }
+
+    public class BinaryTree
+    {
+        public Node<int> root;
+        public Node<int> head = null;
+        public Node<int> tail = null;
+
+        /* Compute the "maxDepth" of a tree -- the number of
+        nodes along the longest path from the root node
+        down to the farthest leaf node.*/
+        public int maxDepth(Node<int> node)
+        {
+            if (node == null)
+                return 0;
+            else
+            {
+                /* compute the depth of each subtree */
+                int lDepth = maxDepth(node.left);
+                int rDepth = maxDepth(node.right);
+
+                /* use the larger one */
+                if (lDepth > rDepth)
+                    return (lDepth + 1);
+                else
+                    return (rDepth + 1);
+            }
+        }
+
+        public void convertbtToDLL(Node<int> node)
+        {
+            if (node != null)
+            {
+                convertbtToDLL(node.left);
+
+                if (head == null)
+                {
+                    head = tail = node;
+                }
+                else
+                {
+                    tail.right = node;
+                    node.left = tail;
+                    tail = node;
+                }
+                convertbtToDLL(node.right);
+            }
+
+            
+        }
+
+        public void display()
+        {
+            //Node current will point to head  
+            Node<int> current = head;
+            if (head == null)
+            {
+                Console.WriteLine("List is empty");
+                return;
+            }
+            Console.WriteLine("Nodes of generated doubly linked list: ");
+            while (current != null)
+            {
+                //Prints each node by incrementing the pointer.  
+
+                Console.Write(current.data + " ");
+                current = current.right;
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public class Node<T>
+    {
+        public T data;
+        public Node<T> left, right;
+
+        public Node(T item)
+        {
+            data = item;
+            left = right = null;
+        }
+    }
+
+    public class GFG
+    {
+
+        // Returns true if there is Pythagorean triplet in
+        // ar[0..n-1]
+        public static bool checkTriplet(int[] arr, int n)
+        {
+
+            // 1. create a loop to access arr from first to last but one element
+            // 2. create an inner loop that access next element from the current one
+            // 3. within the inner loop evaluate the pythagoras triplet c2 = a2 + b2
+            //  -for a perfect triplet float value must be the same as int value
+            // 4. if result in 3. is found in the arr then there is triplet else no triplet
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = i + 1; j < n; j++)
+                {
+                    int intVal = (int)Math.Sqrt(arr[i] * arr[i] + arr[j] * arr[i]);
+                    float floatVal = (float)Math.Sqrt(arr[i] * arr[i] + arr[j] * arr[i]);
+
+                    if (intVal == floatVal && arr[intVal] > -1) //if (intVal == floatVal && arr.Contains(intVal))
+                    {
+                        return true;
+                    }
+                }
+
+            }
+            return false;
+        }
+
+        public static bool checkTripletEqualZero(int[] arr, int n)
+        {
+
+            // 1. create a loop to access arr from first to last but one element
+            // 2. create an inner loop that access next element from the current one to the last element
+            // 3. within the inner loop evaluate the pythagoras triplet c2 = a2 + b2
+            //  -for a perfect triplet float value must be the same as int value
+            // 4. if result in 3. is found in the arr then there is triplet else no triplet
+
+            for (int i = 0; i < n - 1; i++)
+            {
+
+                for (int j = i + 1; j < n; j++)
+                {
+                    int intVal = (int)Math.Sqrt(arr[i] * arr[i] + arr[j] * arr[i]);
+                    float floatVal = (float)Math.Sqrt(arr[i] * arr[i] + arr[j] * arr[i]);
+                    int[] comp = new int[3] { arr[i], arr[j], -intVal };
+
+                    if (intVal == floatVal && arr[intVal] > -1 && comp.Sum() == 0) //if (intVal == floatVal && arr.Contains(intVal))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+
+    }
+
+    public class SubArrays
+    {
+        public (List<int> result, List<int> control) MinimalHeaviest(List<int> arr)
+        {
+            int target = arr.Sum() / 2;
+            arr.Sort();
+            int sum = arr[arr.Count - 1];
+            int count = arr.Count - 1;
+            while (sum <= target)
+            {
+                count--;
+                sum = sum + arr[count];
+                while (arr[count] == arr[count - 1])
+                {
+                    sum = sum + arr[count - 1];
+                    count--;
+                }
+
+            }
+            List<int> controlArr = new List<int>();
+            controlArr.AddRange(arr);
+            controlArr.RemoveRange(count, ((arr.Count) - (count)));
+            arr.RemoveRange(0, count);
+            return (arr, controlArr.ToList());
+        }
+    }
+
+
 
     public static class MyArraySort
     {

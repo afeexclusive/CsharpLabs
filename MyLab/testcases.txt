@@ -1,0 +1,357 @@
+﻿            
+            //SpecialStack s = new SpecialStack();
+            //int[] arr = { 3, 2, 6, 1, 8, 5, 5, 5, 5 };
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    s.push(arr[i]);
+            //    s.getMin();
+            //}
+            //Console.WriteLine();
+            //for (int i = 0; i < arr.Length-4; i++)
+            //{
+            //    s.pop();
+            //    s.getMin();
+            //}
+
+            //s.peek();
+
+            //=====================================================================================================
+
+            //BinaryTree tree = new BinaryTree();
+            //tree.root = new Node<int>(1);
+            //tree.root.left = new Node<int>(2);
+            //tree.root.right = new Node<int>(3);
+            //tree.root.left.left = new Node<int>(4);
+            //tree.root.left.right = new Node<int>(5);
+            //tree.root.right.left = new Node<int>(6);
+            //tree.root.right.right = new Node<int>(7);
+
+            //tree.convertbtToDLL(tree.root);
+            //tree.display();
+
+            //==========================================================================================================
+
+            //var lab = new SubArrays();
+            //var rr = lab.MinimalHeaviest(new List<int>() { 2,2, 1, 3, 4,4, 5, 0,4,8,8 });
+            ////var rr = lab.MinimalHeaviest(new List<int>() { 5, 5, 10, 100, 10, 5 });
+            //foreach (var item in rr.result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine("------------------------------------");
+            //foreach (var item in rr.control)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //var ii = rr.result.Intersect(rr.control);
+
+            //foreach (var item in ii)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //==========================================================================================================
+            //int[] arr = { 2, 2, 1, 3, 4, 4, 5, 4, 8, 8 };
+            //int n = arr.Length;
+            //if (GFG.checkTriplet(arr, n))
+            //    Console.Write("Yes");
+            //else
+            //    Console.Write("No");
+            
+            //=========================================================================================================
+            
+            //BinaryTree tree = new BinaryTree();
+
+            //tree.root = new Node<int>(1);
+            //tree.root.left = new Node<int>(2);
+            //tree.root.right = new Node<int>(3);
+            //tree.root.left.left = new Node<int>(4);
+            //tree.root.left.right = new Node<int>(5);
+            //tree.root.right.left = new Node<int>(6);
+            //tree.root.right.right = new Node<int>(7);
+
+            //Console.WriteLine("Height of tree is : " + tree.maxDepth(tree.root));
+
+
+            //===================================================================================================
+
+            //Console.WriteLine(Interview(new int[] { 5, 5, 10, 10, 25, 15, 20, 20 }, 120));
+            //==============================================================================
+            //Console.WriteLine(MonthName(0));
+            //=======================================================================
+            //var a = MultiplyByLength(new int[] { 1, 3, 5, 6 });
+            //foreach (var item in a)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //================================================================================
+
+            //Console.WriteLine(
+            //    DiagonalDifference( new List<List<int>>()
+            //    { 
+            //        new List<int>(){ 11, 2, 4 }, 
+            //        new List<int>() { 4, 5, 6 }, 
+            //        new List<int>() { 10, 8, -12} 
+            //    }));
+            //==================================================================================
+
+            //PlusMinus(new List<int> { -4, 3, -9, 0, 4, 1 });
+            //====================================================================
+
+            //Staircase(9);
+            //========================================================================
+
+            //MiniMaxSum(new List<int> { 1, 3, 5, 7, 9 });
+            //MiniMaxSum(new List<int> { 256741038, 623958417, 467905213, 714532089, 938071625 });
+            //===================================================================================
+
+            //Console.WriteLine(ReverseWord("afe"));
+            //=======================================================================================
+
+            //Console.WriteLine(TimeConversion("07:05:45PM"));
+            //========================================================================================
+            //Console.WriteLine(MinimumDistances(new List<int> { 1, 2, 3, 4, 3, 6, 7, 2, 9 }));
+
+            //=========================================================================================
+            //var tt = PrintDateTimeFormats();
+            //for (int i = 0; i < tt.Length; i++)
+            //{
+
+            //    Console.WriteLine($"{tt[i]} --- {i}");
+            //}
+            //===============================================================================================
+
+            //Console.WriteLine(HowManyGames(20, 3, 6, 80));
+            //=========================================================================================
+
+            //Console.WriteLine(Factorial(5));
+            //======================================================================================
+
+            //Console.WriteLine(RandomNum());
+            //====================================================================================
+
+            //for (int i = 0; i < 5000; i++)
+            //{
+            //    Console.WriteLine(ExtractNumberFromString(Guid.NewGuid().ToString()));
+            //}
+            //========================================================================================
+
+            //Console.WriteLine(FirstDayOfYear(DateTime.Now));
+            //================================================================================
+
+            //var people = GenerateSn();
+            //foreach (var item in people)
+            //{
+            //    Console.WriteLine($"No: {item.Sn} Name: {item.Name}");
+
+            //}
+
+            //===================================================================================================
+            //var dics = ConvertJsonToDic("{\"CcyCode\":\"GMD\",\"CountryCode\":\"GMB\",\"EncryptLogin\":false,\"EnforcePwdDays\":4,\"MaxiPasswordLength\":10}");
+            //foreach (var item in dics)
+            //{
+            //    Console.WriteLine($"key: {item.Key} || value: {item.Value}");
+            //}
+            //====================================================================================================
+            //int[] data = new int[] {3,6,2,8,1,5,4,10,9,7 };
+
+            //==========================================================================================================
+            //string[] lines = System.IO.File.ReadAllLines(@"C:\Users\AdMiN\OneDrive\Desktop\algorithm\1000line.txt");
+            //List<int> numbers = new List<int>();
+            //// Display the file contents by using a foreach loop.
+            //foreach (string line in lines)
+            //{
+            //    //Console.WriteLine(line);
+            //    numbers.Add(int.Parse(line));
+            //}
+
+            //int[] data = numbers.ToArray();
+            ////ArraySort(data);
+
+            //data.MySort();
+
+            //foreach (var item in data)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //==========================================================================================================
+
+            //var bbody = new RequstDetails();
+
+            //Console.WriteLine("enter prn then tin");
+            //bbody.prn =  Console.ReadLine();
+            //bbody.tin = Console.ReadLine();
+            //string[] st = new string[] {"afe","ayokunle", "bole" };
+
+            //var res = st.OrderByDescending(x=>x);
+
+
+            //CallNRA(bbody);
+
+            //==============================================================================
+
+            //Console.WriteLine(ValidateNullableDate("2001-12-29"));
+
+            //string strg = null;
+
+            //Console.WriteLine(strg ?? string.Join("", strg.Take(10)));
+
+            //int value = 8;
+            //string binary = Convert.ToString(value, 2);
+
+            //Console.WriteLine(RepeatingChar("bookkeepping"));
+
+            //===========================================================================
+
+            //DateTime dt = DateTime.FromOADate(39938);
+            //Console.WriteLine(dt);
+            //===========================================================================
+
+            //Console.WriteLine(NameDescription("Ayokunle").Name);
+            //Console.WriteLine(NameDescription("Ayokunle").isValid);
+            //Console.WriteLine(NameDescription("Ayokunle").Lenth);
+            //===========================================================================
+
+            //Console.WriteLine(Regex.Replace("My name IS Afe", @"s", ""));
+            //Console.WriteLine("My name IS Afe".Replace(@" ", ""));
+            //==========================================================================
+
+            //var result = DynamicResult(1);
+
+            //string resultStr = JsonConvert.SerializeObject(result.ReturnObj);
+
+            //var sst = result.ReturnObj.ToString();
+
+            //PersonInfo personInfoo = JsonConvert.DeserializeObject<PersonInfo>(resultStr);
+            //=========================================================================================================
+
+            //StructureOrClass();
+            //========================================================================================
+
+            //var student = new { Id = 1, FirstName = "James", LastName = "Bond" };
+            //Console.WriteLine(student.GetType().Name);
+            //=========================================================================================
+
+            // Culture culture = new Culture();
+
+            // culture = MyLibrary.GetCultureInfo();
+
+            //foreach (var item in Fibofibo(16))
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+            //Console.WriteLine("-------");
+            //Console.WriteLine("-------");
+
+            //for (int i = 0; i < 16; i++)
+            //{
+            //    Console.Write(Fibonacci(i) + " ");
+            //}
+            //=============================================================================================
+
+            //int n, r, sum = 0, temp;
+            //Console.Write("Enter the Number: ");
+            //n = int.Parse(Console.ReadLine());
+            //temp = n;
+            //while (n > 0)
+            //{
+            //    r = n % 10;
+            //    sum = (sum * 10) + r;
+            //    n = n / 10;
+            //}
+            //if (temp == sum)
+            //    Console.Write("Number is Palindrome.");
+            //else
+            //    Console.Write("Number is not Palindrome");
+            //======================================================
+
+            //ReadDigits(4535);
+            //=========================================================
+
+            //string str = "One two     three\n four\tfive ";
+            //int i = 0;
+            //int wc = 0;
+            //bool toCount = false;fibo
+            //while (i < str.Length)
+            //{
+
+            //    if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
+            //    {
+            //        toCount = false;
+            //    }
+            //    else if (!toCount)
+            //    {
+            //        toCount = true;
+            //        wc++;
+            //    }
+            //    i++;
+            //}
+
+
+            //Console.WriteLine(wc);
+            //=======================================================================================
+
+            //search("Amen hallelujah amen amen amen", "Amen");
+
+            //==========================================================================================
+
+            //RemoveDup("BookKEepping");
+
+            //==================================================================================
+
+            //string mystr = "jdghd6dndfdn,dfd7nfdksdn8dlccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccsdfkjdlkflidudnvioyiodnvldjf9dsdfmdbkdmndkjdfhdkflndfndmn";
+            //char[] s = mystr.ToCharArray();
+            //Array.Sort(s);
+
+            //var ans = s.GroupBy(x => x.ToString());
+            //var jj = ans.OrderByDescending(y => y.Count()).First().Key;
+            //Console.WriteLine();
+            //Console.WriteLine(string.Join("",s));
+
+            //=================================================================================
+
+            //string mystr = "jdghd6dndfdn,dfd7nfdksdn8dlccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccsdfkjdlkflidudnvioyiodnvldjf9dsdfmdbkdmndkjdfhdkflndfndmn"; 
+
+            //int[] count = new int[256];
+            //int max = int.MinValue;
+            //var result = ' ';
+            //for (int i = 0; i < mystr.Length; i++)
+            //{
+            //    count[mystr[i]]++;
+            //    if (max < count[mystr[i]])
+            //    {
+            //        max = count[mystr[i]];
+            //        result = mystr[i];
+            //    }
+            //}
+
+            //int[] myaa = new int[256];
+
+            //Console.WriteLine("{0}{1}", "charValue:", myaa['d']);
+
+            //foreach (var item in myaa)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+
+            //var ans = s.GroupBy(x => x.ToString());
+            //var jj = ans.OrderByDescending(y => y.Count()).First().Key;
+            //foreach (var item in count)
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine("----------");
+            //Console.WriteLine("----------");
+            //Console.WriteLine(mystr);
+            //Console.WriteLine(result);
+
+            //=========================================================================================
+            //var kk = Fibonacci(8);
+
+            //Console.WriteLine(Fibonacci(5));
+
+            //Console.ReadLine();
