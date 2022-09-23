@@ -1,4 +1,58 @@
 ﻿            
+
+            //==================================================================================
+            //Console.WriteLine(LongestUniqueSubsttr("amhdodihdosjdsasaaskjdf"));
+            //Console.WriteLine(LongestUniqueSubsttr("geeksforgeeks"));
+            //=================================================================================
+
+            //=================================================================================
+            LinkedList list = new LinkedList();
+            list.ListA = new LinkedList.Node(8);
+            list.ListA.next = new LinkedList.Node(1);
+            list.ListA.next.next = new LinkedList.Node(4);
+            list.ListA.next.next.next = new LinkedList.Node(2);
+
+            list.ListB = new LinkedList.Node(3);
+            list.ListB.next = new LinkedList.Node(6);
+
+            //// List before reversal
+            //Console.WriteLine("Given linked list:");
+            //list.PrintList();
+
+            //// Reverse the list
+            //list.ReverseList(list.head, 2);
+
+            //// List after reversal
+            //Console.WriteLine("Reversed linked list:");
+            //list.PrintList();
+
+
+            list.SumOfLinkedList();
+            //===================================================================================
+
+            //SubArray(new List<int> { 3, 1, 2, 4,1,3,2,6,4 });
+
+            //==============================================================================
+
+            //LinkedList list = new LinkedList();
+            //list.AddNode(new LinkedList.Node(85));
+            //list.AddNode(new LinkedList.Node(15));
+            //list.AddNode(new LinkedList.Node(4));
+            //list.AddNode(new LinkedList.Node(20));
+
+            //// List before reversal
+            //Console.WriteLine("Given linked list:");
+            //list.PrintList();
+
+            //// Reverse the list
+            //list.ReverseList(list.head, 2);
+
+            //// List after reversal
+            //Console.WriteLine("Reversed linked list:");
+            //list.PrintList();
+
+            //==============================================================================
+
             //SpecialStack s = new SpecialStack();
             //int[] arr = { 3, 2, 6, 1, 8, 5, 5, 5, 5 };
             //for (int i = 0; i < arr.Length; i++)

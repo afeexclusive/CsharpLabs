@@ -16,24 +16,47 @@ namespace MyLab
 
         static void Main(string[] args)
         {
-            LinkedList list = new LinkedList();
-            list.AddNode(new LinkedList.Node(85));
-            list.AddNode(new LinkedList.Node(15));
-            list.AddNode(new LinkedList.Node(4));
-            list.AddNode(new LinkedList.Node(20));
-
-            // List before reversal
-            Console.WriteLine("Given linked list:");
-            list.PrintList();
-
-            // Reverse the list
-            list.ReverseList();
-
-            // List after reversal
-            Console.WriteLine("Reversed linked list:");
-            list.PrintList();
+            //==================================================================================
+            //Console.WriteLine(LongestUniqueSubsttr("amhdodihdosjdsasaaskjdf"));
+            //Console.WriteLine(LongestUniqueSubsttr("geeksforgeeks"));
+            //=================================================================================
         }
 
+        static int LongestUniqueSubsttr(string str)
+        {
+            string test = "";
+            List<string> subs = new List<string>();
+            // Result
+            int maxLength = -1;
+
+            // Return zero if string is empty
+            if (string.IsNullOrWhiteSpace(str))
+            {
+                return 0;
+            }
+            // Return one if string length is one
+            else if (str.Length == 1)
+            {
+                return 1;
+            }
+            else if(str.Distinct() == null)
+            {
+                return 1;
+            }
+            foreach (var item in str)
+            {
+                if (test.Contains(item))
+                {
+                    subs.Add(test);
+                    test = "";
+                }
+                test = test + item;
+                maxLength = Math.Max(test.Length, maxLength);
+            }
+            subs.Add(test);
+            Console.WriteLine(subs.FirstOrDefault(x => x.Length == maxLength));
+            return maxLength;
+        }
         static char[] removeDuplicateBST(char[] str, int n)
         {
 
@@ -710,13 +733,41 @@ namespace MyLab
             }
         }
 
+        public static void SubArray(List<int> mainArr)
+        {
+            if (mainArr== null)
+            {
+                return;
+            }
+            List<int> self;
+            int sumMultiple = 0;
+            for (int i = 0; i < mainArr.Count; i++)
+            {
+                self = new List<int>();
+                self.Add(mainArr[i]);
+                sumMultiple += (self.Min() * self.Sum());
+                int addCount = i+1;
+                while (addCount < mainArr.Count)
+                {
+                    self.Add(mainArr[addCount]);
+                    sumMultiple += (self.Min() * self.Sum());
+                    addCount++;
+                }
+
+            }
+            int mood = (int)Math.Pow(10, 9) + 7;
+            Console.WriteLine(sumMultiple%mood);
+        }
+
     }
 
 
 
     public class LinkedList
     {
-        Node head;
+        public Node head;
+        public Node ListA;
+        public Node ListB;
 
         public class Node
         {
@@ -746,18 +797,61 @@ namespace MyLab
         }
 
         // function to reverse the list
-        public void ReverseList()
+        public Node ReverseList(Node head, int k) //k is the number of nodes to be reversed each time
         {
-            Node prev = null, current = head, next = null;
-            while (current != null)
+            if (head == null) return null;
+            Node current = head;
+            Node prev = null, next = null;
+            int i = 0;
+            while (i<k && current != null)
             {
                 next = current.next;
                 current.next = prev;
                 prev = current;
                 current = next;
+                i++;
             }
-            head = prev;
+            if (next != null) head.next = ReverseList(next, k);
+            //this.head = prev;
+            return prev;
         }
+
+
+        //function to tranverse linkedlist to access the data
+        public void SumOfLinkedList()
+        {
+            string sss = "";
+            while (ListA != null)
+            {
+                sss += ListA.data.ToString();
+                ListA = ListA.next;
+            }
+            string tt = "";
+            while (ListB != null)
+            {
+                tt += ListB.data.ToString();
+                ListB = ListB.next;
+            }
+            string sum = (int.Parse(sss) + int.Parse(tt)).ToString();            
+            Node nnext = null;
+            for (int i = sum.Length - 1; i >= 0; i--)
+            {
+                int num = int.Parse(sum[i].ToString());
+                Node prev = new Node(num);
+                if (nnext == null)
+                    nnext = prev;
+                else
+                {
+                    Node temp = nnext;
+                    while (temp.next != null)
+                    {
+                        temp = temp.next;
+                    }
+                    temp.next = prev;
+                }
+            }
+        }
+
 
         // function to print the list data
         public void PrintList()
@@ -774,59 +868,34 @@ namespace MyLab
     }
     public class SpecialStack
     {
-
         int min = -1; // sentinel value for min
         static int demoVal = 9999; // DEMO_VALUE
         Stack<int> st = new Stack<int>();
 
-        public void getMin() { Console.WriteLine("min is: " + min); }
-
+        public int getMin() { return min; }
         public void push(int val)
         {
-            // if stack is empty OR current element is less than
-            // min, update min..
-            if (st.Count == 0 || val < min)
-            {
-                min = val;
-            }
-
-            st.Push(val * demoVal
-                    + min); // encode the current value with
-                            // demoVal, combine with min and
-                            // insert into stack
-            Console.WriteLine("pushed: " + val);
+            if (st.Count == 0 || val < min) min = val;
+            st.Push(val * demoVal + min);
         }
 
         public int pop()
         {
             // if stack is empty return -1;
-            if (st.Count == 0)
-            {
-                Console.WriteLine("stack underflow");
-                return -1;
-            }
-
+            if (st.Count == 0) return -1;
             int val = st.Pop();
 
-            if (st.Count != 0) // if stack is empty, there would
-                               // be no min value present, so
-                               // make min as -1
+            if (st.Count != 0)
                 min = st.Peek() % demoVal;
             else
                 min = -1;
-            Console.WriteLine("popped: " + val / demoVal);
-            return val / demoVal; // decode actual value from
-                                  // encoded value
+            return val / demoVal;
         }
 
         public int peek()
         {
-            Console.WriteLine("Peek:" + st.Peek() / demoVal);
-            return st.Peek() / demoVal; // decode actual value
-                                        // from encoded value
+            return st.Peek() / demoVal;
         }
-
-
     }
 
     public class BinaryTree
@@ -834,6 +903,37 @@ namespace MyLab
         public Node<int> root;
         public Node<int> head = null;
         public Node<int> tail = null;
+
+        public bool value1 = false, value2 = false;
+
+        //Find Lowest Common Ancestor
+        public Node<int> FindLCA(Node<int> node, int data1, int data2)
+        {
+            if (node==null) return null;
+
+            Node<int> temp = null;
+            if (node.data == data1)
+            {
+                value1 = true;
+                temp = node;
+            }
+
+            if (node.data == data2)
+            {
+                value2 = true;
+                temp = node;
+            }
+
+            Node<int> leftside = FindLCA(node.left, data1, data2);
+            Node<int> rightside = FindLCA(node.right, data1, data2);
+
+            if (leftside != null && rightside != null)
+            {
+                return node;
+            }
+
+            return (leftside != null) ? leftside : rightside;
+        }
 
         /* Compute the "maxDepth" of a tree -- the number of
         nodes along the longest path from the root node
@@ -844,11 +944,8 @@ namespace MyLab
                 return 0;
             else
             {
-                /* compute the depth of each subtree */
                 int lDepth = maxDepth(node.left);
                 int rDepth = maxDepth(node.right);
-
-                /* use the larger one */
                 if (lDepth > rDepth)
                     return (lDepth + 1);
                 else
@@ -861,7 +958,6 @@ namespace MyLab
             if (node != null)
             {
                 convertbtToDLL(node.left);
-
                 if (head == null)
                 {
                     head = tail = node;
@@ -874,8 +970,6 @@ namespace MyLab
                 }
                 convertbtToDLL(node.right);
             }
-
-            
         }
 
         public void display()
@@ -897,6 +991,8 @@ namespace MyLab
             }
             Console.WriteLine();
         }
+
+
     }
 
     public class Node<T>
@@ -914,30 +1010,25 @@ namespace MyLab
     public class GFG
     {
 
-        // Returns true if there is Pythagorean triplet in
-        // ar[0..n-1]
+
+        // 1. create a loop to access arr from first to last but one element
+        // 2. create an inner loop that access next element from the current one
+        // 3. within the inner loop evaluate the pythagoras triplet c2 = a2 + b2
+        //  -for a perfect triplet float value must be the same as int value
+        // 4. if result in 3. is found in the arr then there is triplet else no triplet
         public static bool checkTriplet(int[] arr, int n)
         {
-
-            // 1. create a loop to access arr from first to last but one element
-            // 2. create an inner loop that access next element from the current one
-            // 3. within the inner loop evaluate the pythagoras triplet c2 = a2 + b2
-            //  -for a perfect triplet float value must be the same as int value
-            // 4. if result in 3. is found in the arr then there is triplet else no triplet
-
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = i + 1; j < n; j++)
                 {
                     int intVal = (int)Math.Sqrt(arr[i] * arr[i] + arr[j] * arr[i]);
                     float floatVal = (float)Math.Sqrt(arr[i] * arr[i] + arr[j] * arr[i]);
-
                     if (intVal == floatVal && arr[intVal] > -1) //if (intVal == floatVal && arr.Contains(intVal))
                     {
                         return true;
                     }
                 }
-
             }
             return false;
         }
