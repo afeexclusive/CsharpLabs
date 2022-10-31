@@ -17,29 +17,211 @@ namespace MyLab
         static void Main(string[] args)
         {
             //==================================================================================
-            //Console.WriteLine(LongestUniqueSubsttr("amhdodihdosjdsasaaskjdf"));
-            //Console.WriteLine(LongestUniqueSubsttr("geeksforgeeks"));
+            ReverseWord("07060936988");
             //=================================================================================
+            
+
+        }
+
+        
+        public static void AllPossibleTrippletsForBeautifulTripplets(int[] arr, int d )
+        {
+            int n = arr.Length;
+            int y = 0;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = i+1; j < n; j++)
+                {
+                    if (j < i)
+                    {
+                        continue;
+                    }
+
+                    for (int k = j+1; k < n; k++)
+                    {
+                        if (k < j) continue;
+                        if (arr[j] - arr[i] == d && arr[k] - arr[j] == d)
+                        {
+                            Console.WriteLine($"({y++} - {arr[i]},{arr[j]},{arr[k]})");
+                        }
+                    }
+                }
+            }
+        }
+
+        public static String ConvertToUpperCase(String input)
+        {
+            String output = "";
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] >= 'a' && input[i] <= 'z')
+                {
+                    output += (char)(input[i] - 'a' + 'A');
+                }
+                else
+                    output += input[i];
+            }
+            return output;
+        }
+
+        public static String ConvertToLowerCase(String input)
+        {
+            String output = "";
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] >= 'A' && input[i] <= 'Z')
+                {
+                    output += (char)(input[i] + 32);
+                }
+                else
+                    output += input[i];
+            }
+            return output;
+        }
+
+        static bool BracketsDepthWithStack(string str)
+        {
+            int count = 0;
+            Stack<char> st = new Stack<char>();
+            foreach (char item in str)
+            {
+                if (item == '(')
+                {
+                    st.Push(item);
+                }
+                else
+                {
+                    if (item == ')')
+                    {
+                        if (st.Count > count)
+                        {
+                            count = st.Count;
+                        }
+                        st.Pop();
+                    }
+                }
+            }
+            return st.Count > 0 ? false : true;
+        }
+
+        //Validates if all brackets:- ({[<>]}) opened are closed
+        static bool BracketsValidationWithIF(string str)
+        {
+            int validator = 0;
+            foreach (char item in str)
+            {
+                if (item == '(')
+                {
+                    validator = validator + 3;
+                }
+                else if (item == ')')
+                {
+                    validator = validator - 3;
+                }
+                else if (item == '{')
+                {
+                    validator = validator + 11;
+                }
+                else if (item == '}')
+                {
+                    validator = validator - 11;
+                }
+                else if (item == '[')
+                {
+                    validator = validator + 13;
+                }
+                else if (item == ']')
+                {
+                    validator = validator - 13;
+                }
+                else if (item == '<')
+                {
+                    validator = validator + 17;
+                }
+                else if(item=='>')
+                {
+                    validator = validator - 17;
+                }
+                else
+                {
+                    validator = -1;
+                }
+            }
+            return validator == 0 ? true : false;
+
+        }
+
+        //Validates if all brackets:- ({[<>]}) opened are closed
+        static bool BracketsValidationWithSWITCH(string str)
+        {
+            int validator = 0;
+            foreach (var item in str)
+            {
+                switch (item)
+                {
+                    case '(':
+                        validator = validator + 3;
+                        break;
+                    case ')':
+                        validator = validator - 3;
+                        break;
+                    case '{': 
+                        validator = validator + 5; 
+                        break;
+                    case '}':
+                        validator = validator - 5;
+                        break;
+                    case '[':
+                        validator = validator + 7;
+                        break;
+                    case ']':
+                        validator = validator - 7;
+                        break;
+                    case '<':
+                        validator = validator + 11;
+                        break;
+                    case '>':
+                        validator = validator - 11;
+                        break;
+                    default:
+                        validator = -1;
+                        break;
+                }
+            }
+            return validator == 0 ? true : false;
+        }
+
+
+        // integer remain, D = double previous score, C = invalidates previous score, + add 2 previus scores. e.g: [5, 2, C, D, +]
+        static int Callpoint(string[] ops)
+        {
+            List<int> res = new List<int>();
+            int b;
+            for (int i = 0; i < ops.Length; i++)
+            {
+                if (int.TryParse(ops[i], out b)) res.Add(int.Parse(ops[i]));
+                if (ops[i] == "D") res.Add(2 * (res[res.Count - 1]));
+                if (ops[i] == "+") res.Add(res[res.Count - 1] + res[res.Count - 2]);
+                if (ops[i] == "C") res.RemoveAt(res.Count - 1);
+
+            }
+            return res.Sum();
         }
 
         static int LongestUniqueSubsttr(string str)
         {
             string test = "";
             List<string> subs = new List<string>();
-            // Result
             int maxLength = -1;
-
-            // Return zero if string is empty
             if (string.IsNullOrWhiteSpace(str))
             {
                 return 0;
             }
-            // Return one if string length is one
             else if (str.Length == 1)
             {
                 return 1;
             }
-            else if(str.Distinct() == null)
+            else if(str.Distinct().Count() == 1)
             {
                 return 1;
             }
@@ -84,9 +266,7 @@ namespace MyLab
             {
                 s.Add(x);
             }
-            
             string res = string.Join("", s);
-
             return res; 
         }
 
@@ -156,9 +336,39 @@ namespace MyLab
             return result;
         }
 
+        static char LinqMaxOccuringChar(string str)
+        {
+            var mycharArr = str.ToLower().ToCharArray();
+            Array.Sort(mycharArr);
+            int charCount = 1;
+            int highest = 0;
+            char theChar = '\0';
+            for (int i = 0; i < mycharArr.Length; i++)
+            {
+                if (i!= 0 && mycharArr[i] == mycharArr[i-1])
+                {
+                    charCount++;
+                    if (charCount > highest)
+                    {
+                        highest = charCount;
+                        theChar = mycharArr[i];
+                    }
+                }
+                else
+                {
+                    charCount = 1;
+                }
+            }
+            return theChar;
+        }
+
         //search pattern
         static int countFreq(String pat, String txt)
         {
+            //Make the search case insensitive
+            //pat = pat.ToLower();
+            //txt = txt.ToLower();
+
             int M = pat.Length;
             int N = txt.Length;
             int res = 0;
@@ -188,33 +398,63 @@ namespace MyLab
         }
 
         //search pattern
-        public static void search(String txt, String pat)
+        public static void PatternFoundAt(String txt, String pat)
         {
             int M = pat.Length;
             int N = txt.Length;
 
-            /* A loop to slide pat one by one */
             for (int i = 0; i <= N - M; i++)
             {
                 int j;
 
-                /* For current index i, check for pattern
-                match */
                 for (j = 0; j < M; j++)
-                    if (txt[i + j] != pat[j])
+                {
+                    var a = txt[i + j];
+                    var b = pat[j];
+                    if ( a!= b)
                         break;
-
-                // if pat[0...M-1] = txt[i, i+1, ...i+M-1]
+                }
                 if (j == M)
                     Console.WriteLine("Pattern found at index " + i);
             }
         }
 
-        static char encodedChar(string str, int k)
+        // string s = aabcd is reshuffled to give string t = abdach
+        // when one more character is added to it. find the character added
+        //Example: s = aabcd, t = abdach. Answer: h is added
+        public static char FindAllienCharacter(string s, string t)
         {
-            // expand string variable is
-            // used to store final string
-            // after decompressing string str
+            int M = s.Length;
+            int N = t.Length;
+            int addedCharPosition = 0;
+            s.ToLower();
+            t.ToLower();
+            char[] tempT = t.ToCharArray();
+            Array.Sort(tempT);
+            t = string.Join("", tempT);
+            for (int i = 0; i <= N - M; i++)
+            {
+                int j;
+
+                for (j = 0; j < M; j++)
+                {
+                    var a = t[i + j];
+                    var b = s[j];
+                    if (a != b)
+                        break;
+                }
+                if (j == M)
+                {
+                    addedCharPosition = i;
+                }
+            }
+            return addedCharPosition == 0 ? t[s.Length] : t[addedCharPosition - 1];
+        }
+
+        static char DecompressEncodedChar(string str, int k)
+        {
+            str = string.Join("", str.Split(' ')).ToLower();
+            
             String expand = "";
 
             String temp = ""; // Current substring
@@ -224,45 +464,80 @@ namespace MyLab
             {
                 temp = ""; // Current substring
                 freq = 0; // count frequency of current
-                          // substring
-
-                // read characters until you
-                // find a number or end of string
-                while (i < str.Length && str[i] >= 'a'
-                                      && str[i] <= 'z')
+                while (i < str.Length && str[i] >= 'a' && str[i] <= 'z')
                 {
-                    // push character in temp
                     temp += str[i];
                     i++;
                 }
 
-                // read number for how many times
-                // string temp will be repeated
-                // in decompressed string
-                while (i < str.Length && str[i] >= '1'
-                                      && str[i] <= '9')
+                while (i < str.Length && str[i] >= '1' && str[i] <= '9')
                 {
-                    // generating frequency of temp
                     freq = freq * 10 + str[i] - '0';
                     i++;
                 }
 
-                // now append string temp into
-                // expand equal to its frequency
                 for (int j = 1; j <= freq; j++)
                     expand += temp;
             }
 
-            // this condition is to handle
-            // the case when string str is
-            // ended with alphabets not
-            // with numeric value
             if (freq == 0)
                 expand += temp;
-
             return expand[k - 1];
         }
 
+        static void printArray(int[] arr)
+        {
+            int N = arr.Length;
+            for (int i = 0; i < N; ++i)
+                Console.Write(arr[i] + " ");
+            Console.Read();
+        }
+
+        public static void HeapSort(int[] arr)
+        {
+            printArray(arr);
+            int N = arr.Length;
+            // Build heap (rearrange array)
+            for (int i = N / 2 - 1; i >= 0; i--)
+                heapify(arr, N, i);
+            // One by one extract an element from heap
+            for (int i = N - 1; i > 0; i--)
+            {
+                // Move current root to end
+                int temp = arr[0];
+                arr[0] = arr[i];
+                arr[i] = temp;
+                // call max heapify on the reduced heap
+                heapify(arr, i, 0);
+            }
+
+            printArray(arr);
+        }
+
+        // To heapify a subtree rooted with node i which is
+        // an index in arr[]. n is size of heap
+        private static void heapify(int[] arr, int N, int i)
+        {
+            int largest = i; // Initialize largest as root
+            int l = 2 * i + 1; // left = 2*i + 1
+            int r = 2 * i + 2; // right = 2*i + 2
+
+            // If left child is larger than root
+            if (l < N && arr[l] > arr[largest])
+                largest = l;
+            // If right child is larger than largest so far
+            if (r < N && arr[r] > arr[largest])
+                largest = r;
+            // If largest is not root
+            if (largest != i)
+            {
+                int swap = arr[i];
+                arr[i] = arr[largest];
+                arr[largest] = swap;
+                // Recursively heapify the affected sub-tree
+                heapify(arr, N, largest);
+            }
+        }
 
         public static void ReadDigits(int n)
         {
@@ -291,8 +566,6 @@ namespace MyLab
                 {
                     result[i] = result[i - 1] + result[i - 2];
                 }
-
-                
             }
             return result;
         }
@@ -300,12 +573,20 @@ namespace MyLab
         //Fibonacci Series Recursive
         public static int Fibonacci(int len)
         {
-            int[] res = new int[len];
             if (len == 0) return 0;
             if (len == 1) return 1;
             return Fibonacci(len - 1) + Fibonacci(len - 2);
         }
 
+        static int[] myfibo(int len)
+        {
+            int[] res = new int[len];
+            for (int i = 0; i < len; i++)
+            {
+                res[i] = Fibonacci(i);
+            }
+            return res;
+        }
 
         public static void StructureOrClass()
         {
@@ -570,8 +851,6 @@ namespace MyLab
         {
             if (num == 0) return 1;
             return num * Factorial(num - 1);
-
-
         }
 
 
@@ -641,6 +920,8 @@ namespace MyLab
         {
             //var rev = word.Reverse<char>().ToString();
             var rev = string.Concat(word.Reverse<char>());
+            var ii = string.Concat(word.Reverse().Take(6).Reverse());
+
             return rev;
         }
 
@@ -761,7 +1042,84 @@ namespace MyLab
 
     }
 
+    // A directed graph using
+    // adjacency list representation
+    public class Graph
+    {
+        private int v;
 
+        private List<int>[] adjList;
+
+        // Constructor
+        public Graph(int vertices)
+        {
+            this.v = vertices;
+
+            initAdjList();
+        }
+
+        // utility method to initialise
+        // adjacency list
+        private void initAdjList()
+        {
+            adjList = new List<int>[v];
+
+            for (int i = 0; i < v; i++)
+            {
+                adjList[i] = new List<int>();
+            }
+        }
+
+        public void addEdge(int u, int v)
+        {
+            adjList[u].Add(v);
+        }
+
+        // Prints all paths from
+        // 's' to 'd'
+        public void printAllPaths(int s, int d)
+        {
+            bool[] isVisited = new bool[v];
+            List<int> pathList = new List<int>();
+
+            // add source to path[]
+            pathList.Add(s);
+
+            // Call recursive utility
+            printAllPathsUtil(s, d, isVisited, pathList);
+        }
+
+        private void printAllPathsUtil(int u, int d,
+                                       bool[] isVisited,
+                                       List<int> localPathList)
+        {
+
+            if (u.Equals(d))
+            {
+                Console.WriteLine(string.Join(" ", localPathList));
+                return;
+            }
+
+            // Mark the current node
+            isVisited[u] = true;
+
+            foreach (int i in adjList[u])
+            {
+                if (!isVisited[i])
+                {
+                    localPathList.Add(i);
+                    printAllPathsUtil(i, d, isVisited,
+                                      localPathList);
+
+                    localPathList.Remove(i);
+                }
+            }
+
+            // Mark the current node
+            isVisited[u] = false;
+        }
+
+    }
 
     public class LinkedList
     {
@@ -953,6 +1311,7 @@ namespace MyLab
             }
         }
 
+        //Convert Binary Tree to DoubleLinkedList
         public void convertbtToDLL(Node<int> node)
         {
             if (node != null)
